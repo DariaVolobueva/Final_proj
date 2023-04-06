@@ -9,7 +9,7 @@ const cartModel = require("./models/Cart");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://dvolobueva:D92wDCzB7g7sUoKh@final-proj.q5em3zd.mongodb.net/groceries?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://guest:guest123@final-proj.q5em3zd.mongodb.net/groceries?retryWrites=true&w=majority", {
     useNewUrlParser: true,
 });
 
