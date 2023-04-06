@@ -1,0 +1,314 @@
+.cart-banner{
+    width: 100%;
+    height: 450px;
+    @include flex-center-center;
+
+    &_position{
+        position: relative;
+    }
+
+    &__left{
+        width: 967px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(images/cart/cart-banner.png);
+        background-repeat: no-repeat;
+        transform: scaleY(-1);
+        background-size: 150%;
+        background-position-x: center;
+        background-position-y: bottom;
+        z-index: 1;
+
+        @media screen and (max-width: 1600px) {
+            background-position-x: 77%;
+        }
+
+        @media screen and (max-width: 1450px) {
+            background-position-x: 113%;
+        }
+
+        @media screen and (max-width: 1350px) {
+            background-position-x: 126%;
+        }
+
+        @media screen and (max-width: 1250px) {
+            background-position-x: 142%;
+        }
+
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
+    }
+
+    &__right{
+        width: 967px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(images/cart/cart-banner.png);
+        background-repeat: no-repeat;
+        transform: scaleX(-1) scaleY(-1);
+        background-size: 150%;
+        background-position-x: 66%;
+        background-position-y: 53%;
+        z-index: 0;
+
+        @media screen and (max-width: 1600px) {
+            background-position-x: 94%;
+        }
+
+        @media screen and (max-width: 1450px) {
+            background-position-x: 120%;
+        }
+
+        @media screen and (max-width: 1350px) {
+            background-position-x: 133%;
+        }
+
+        @media screen and (max-width: 1250px) {
+            background-position-x: 148%;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            background-position-x: 99%;
+        }
+    }
+
+    &__onion{
+        position: absolute;
+        z-index: 2;
+        width: 154px;
+        height: 214px;
+        top: 190px;
+        left: 693px;
+        background-image: url(images/cart/cart-banner-onion.svg);
+
+        @media screen and (max-width: 1600px) {
+            display: none;
+        }
+    }
+
+    &__strawberry{
+        position: absolute;
+        z-index: 2;
+        width: 118px;
+        height: 179px;
+        top: 156px;
+        right: 595px;
+        background-image: url(images/cart/cart-banner-strawberry.svg);
+
+        @media screen and (max-width: 1600px) {
+            display: none;
+        }
+    }
+
+    &__text{
+        z-index: 3;
+        @include font-size-color-family($font-size-70, $color-dark-slate-grey, Roboto700);
+    }
+}
+
+.cart-main{
+    width: 100%;
+    @include flex-center-center;
+    flex-direction: column;
+    background-color: $color-light-pink;
+
+    & .button-blue{
+        margin-top: 76px;
+    }
+
+    &_position{
+        padding-top: 150px;
+        padding-bottom: 59px;
+        margin-bottom: 145px;
+        margin-top: 141px;
+    }
+
+    &__product{
+        margin-bottom: 40px;
+        @include flex-row-center;
+        justify-content: space-between;
+    }
+
+    &__product-info{
+        @include flex-row-center;
+        justify-content: space-between;
+        
+        & img{
+            width: 296px;
+            height: 240px;
+            border-radius: 30px;
+        }
+
+        & p{
+            @include font-size-color-family($font-size-40, $color-dark-slate-grey, Roboto700);
+            margin-left: 40px;
+            margin-right: 8px;
+        }
+    }
+
+    &__product-name{
+        @include flex-row;
+        align-items: baseline;
+    }
+
+    &__old-price{
+        @include font-size-color-family($font-size-25, $color-silver-chalice, Roboto700);
+        text-decoration: line-through;
+        margin-right: 8px;
+    }
+
+    &__new-price{
+        @include font-size-color-family($font-size-40, $color-dark-slate-grey, Roboto700);
+    }
+
+    &__quantity{
+        margin-left: 185px;
+        @include flex-row-center;
+
+        & label{
+            @include font-size-color-family($font-size-30, $color-dark-slate-grey, Roboto700);
+            margin-right: 22px;
+        }
+
+        & input{
+            width: 134px;
+            height: 80px;
+            border-radius: 16px;
+            margin-right: 96px;
+            border: 1px solid $color-dark-slate-grey;
+            background-color: $color-white;
+            @include font-size-color-family($font-size-20, $color-dark-slate-grey, Roboto700);
+            text-align: center;
+        }
+
+        & button{
+            width: 64px;
+            height: 46px;
+            background-color: $color-dark-slate-grey;
+            @include font-size-color-family($font-size-20, $color-white, Roboto700);
+            border-radius: 16px;
+            outline: none;
+            border: none;
+        }
+    }
+
+    &__final-price{
+        @include font-size-color-family($font-size-40, $color-dark-slate-grey, Roboto700);
+        align-self: end;
+        margin-right: 400px;
+
+        & p{
+            &:first-child{
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+.cart-form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    column-gap: 46px;
+
+    &_position{
+        margin-top: 30px;
+    }
+
+    & label{
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, Roboto700);
+        align-self: self-end;
+        margin-bottom: 26px;
+    }
+
+    & input{
+        width: 569px;
+        height: 80px;
+        padding-left: 23px;
+        background-color: $color-white;
+        border-radius: 16px;
+        border: 1px solid $color-dark-sea-green;
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, Roboto500);
+
+        &::placeholder{
+            @include font-size-color-family($font-size-18, $color-light-grey, RobotoItalic500);
+        }
+    }
+
+    &__label-name{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__name{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    &__label-email{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    &__email{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    &__label-address{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    &__address{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    &__label-number{
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    &__number{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    &__label-message{
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+
+    &__message{
+        padding: 28px 23px;
+        grid-column: 1/3;
+        grid-row: 6/8;
+        background-color: $color-white;
+        border-radius: 16px;
+        border: 1px solid $color-dark-sea-green;
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, Roboto500);
+
+        &::placeholder{
+            @include font-size-color-family($font-size-18, $color-light-grey, RobotoItalic500);
+        }
+    }
+
+    & .button-blue{
+        margin-left: 80%;
+    }
+}
+
+.empty-cart{
+    @include font-size-color-family($font-size-70, $color-dark-slate-grey, Roboto700);
+    background-color: $color-show;
+    @include flex-center-center;
+    height: 50vh;
+    margin-bottom: 50px;
+}

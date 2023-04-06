@@ -1,0 +1,37 @@
+.gallery{
+    @include flex-row-center;
+    justify-content: space-between;
+    background-color: $color-anti-flash-white;
+    flex-wrap: wrap;
+
+    &_position{
+        padding: 12vh 0px;
+    }
+
+    & div{
+        width: 32vw;
+        height: 30vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-repeat: no-repeat;
+    }
+
+    &__first{
+        background-image: url(images/gallery/first.png);
+        background-size: 110%;
+        background-position-y: center;
+    }
+
+    &__second{
+        background-image: url(images/gallery/second.png);
+        background-position: center;
+        background-size: 180%;
+    }
+
+    &__third{
+        background-image: url(images/gallery/third.png); 
+        background-position: center;
+        background-size: 110%;
+    }
+}

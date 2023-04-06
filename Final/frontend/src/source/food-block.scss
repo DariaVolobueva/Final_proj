@@ -1,0 +1,84 @@
+.food-block{
+    @include flex-column-center;
+    justify-content: space-between;
+    width: 335px;
+    height: 482px;
+    background-color: $color-cultured;
+    border-radius: 30px;
+    position: relative;
+
+    &__category{
+        position: absolute;
+        width: 96px;
+        height: 31px;
+        top: 29px;
+        left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font-size-color-family($font-size-15, $color-white, OpenSans400);
+        text-transform: capitalize;
+        background-color: $color-dark-slate-grey;
+        border-radius: 8px;
+    }
+
+    & img{
+        height: 310px;
+        width: 100%;
+        margin-top: 70px;
+        mix-blend-mode: multiply;
+    }
+
+    &__text{
+        @include flex-column;
+        margin-left: 30px;
+        margin-right: 26px;
+        margin-bottom: 17px;
+    }
+
+    &__name{
+        @include font-size-color-family($font-size-20, $color-dark-slate-grey, Roboto700);
+    }
+
+    &__hr{
+        width: 279px;
+        height: 1px;
+        margin-top: 13px;
+        margin-bottom: 6px;
+        background-color: $color-light-grey;
+    }
+
+    &__bottom{
+        @include flex-row-center;
+        justify-content: space-between;
+    }
+
+    &__price{
+        @include flex-row-center;
+    }
+
+    &__old-price{
+        @include font-size-color-family($font-size-15, $color-silver-chalice, OpenSans600);
+        text-decoration: line-through;
+        margin-right: 8px;
+    }
+
+    &__new-price{
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, OpenSans700);
+    }
+
+    &__score{
+        @include flex-row;
+
+        & div{
+            width: 25px;
+            height: 21px;
+            background-image: url(images/testimonial/star.svg);
+            @include background-center-norepeat;
+        }
+    }
+
+    @media screen and (max-width: 1850px) {
+        margin-top: 20px;
+    }
+}

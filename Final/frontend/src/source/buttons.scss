@@ -1,0 +1,54 @@
+.default-button{
+    width: 290px;
+    height: 79px;
+    font-family: Roboto700, $font-families;
+    font-size: $font-size-20;
+    border: none;
+    outline: none;
+    border-radius: 16px;
+    white-space: nowrap;
+    @include flex-row-center;
+    justify-content: center;
+    cursor: pointer;
+
+    & div{
+        width: 19px;
+        height: 19px;
+        background-image: url(images/buttons/arrow.svg);
+        @include background-center-norepeat;
+        background-color: $color-police-blue;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+
+    &:active{
+        background-color: $color-arylide-yellow;
+    color: $color-dark-slate-grey;
+    }
+}
+
+.button-yellow{
+    background-color: $color-arylide-yellow;
+    color: $color-dark-slate-grey;
+}
+
+.button-blue{
+    background-color: $color-dark-slate-grey;
+    color: $color-white;
+}
+
+.button-white{
+    background-color: $color-white;
+    color: $color-dark-slate-grey;
+}
+
+.button-white-border{
+    background-color: $color-white;
+    color: $color-dark-slate-grey;
+    border: 2px solid $color-dark-slate-grey;
+}
+
+.button-light-blue{
+    background-color: $color-show;;
+    color: $color-dark-slate-grey
+}

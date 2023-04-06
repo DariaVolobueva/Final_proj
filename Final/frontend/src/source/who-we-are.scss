@@ -1,0 +1,64 @@
+.who-we-are{
+    position: relative;
+
+    &__image{
+        background-image: url(images/who-we-are/background.png);
+        height: 931px;
+        width: 50%;
+        background-size: 104%;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: center;
+
+        @media screen and (max-width: 1000px) {
+            background: none;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        @include flex-center-center;
+        padding-top: 24vh;
+        padding-bottom: 24vh;
+    }
+}
+
+.who-we-are-content{
+    width: 789px;
+    height: 723px;
+    background-color: $color-white;
+    border-radius: 30px;
+    @include flex-column-center;
+    justify-content: center;
+
+    &_position{
+        position: absolute;
+        top: 100px;
+        right: 260px;
+        padding-top: 78px;
+        padding-bottom: 77px;
+        padding-left: 89px;
+
+        @media screen and (max-width: 1000px) {
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    & .secondary-text{
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    & .block__text{
+        margin-left: 0;
+        width: 635px;
+        margin-bottom: 35px;
+
+        @media screen and (max-width: 700px) {
+            width: 80%;
+        }
+    }
+}

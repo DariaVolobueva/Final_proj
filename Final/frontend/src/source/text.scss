@@ -1,0 +1,34 @@
+.primary-text{
+    width: 700px;
+
+    &__header{
+        @include font-size-color-family($font-size-50, $color-dark-slate-grey, Roboto700);
+        line-height: 1.2;
+    }
+
+    &__subheader{
+        @include font-size-color-family($font-size-36, $color-dark-sea-green, Yellowtail400);
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.secondary-text{
+    & > p{
+        margin-top: 15px;
+        width: 690px;
+        line-height: 1.6;
+        @include font-size-color-family($font-size-18, $color-devys-grey, OpenSans400);
+
+        @media screen and (max-width: 700px) {
+            width: 80%;
+        }
+    }
+}

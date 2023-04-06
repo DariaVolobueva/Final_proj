@@ -1,0 +1,161 @@
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    overflow: hidden;
+    height: 100%;
+
+    &_position{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0,0,0, .2);
+        backdrop-filter: blur(10px);
+    }
+
+    &__body{
+        @include flex-column-center;
+        position: relative;
+        width: 100%;
+        padding-top: 115px;
+        padding-bottom: 125px;
+        background-color: $color-show;
+    }
+
+    &__main{
+        @include flex-row-center;
+    }
+
+    &__image{
+        position: relative;
+
+        & img{
+            width: 591px;
+            width: 37vw;
+            height: 563px;
+            height: 40vw;
+            border-radius: 30px
+        }
+
+        & div{
+            @include flex-center-center;
+            position: absolute;
+            height: 31px;
+            border-radius: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            background-color: $color-dark-slate-grey;
+            top: 38px;
+            left: 31px;
+            @include font-size-color-family($font-size-15, $color-white, Roboto500);
+        }
+    }
+
+    &__close{
+        position: absolute;
+        @include flex-center-center;
+        top: 132px;
+        right: 196px;
+        width: 64px;
+        height: 46px;
+        background-color: $color-dark-slate-grey;
+        @include font-size-color-family($font-size-20, $color-white, Roboto700);
+        border-radius: 16px;
+    }
+
+    &__main-text{
+        @include flex-column;
+        margin-left: 88px;
+    }
+
+    &__name{
+        @include font-size-color-family($font-size-40, $color-dark-slate-grey, Roboto500);
+        margin-bottom: 15px;
+    }
+
+    &__score{
+        @include flex-row;
+
+        & div{
+            width: 25px;
+            height: 21px;
+            background-image: url(images/testimonial/star.svg);
+            @include background-center-norepeat;
+        }
+    }
+
+    &__price{
+        @include flex-row-center;
+        margin-top: 15px;
+    }
+
+    &__old-price{
+        @include font-size-color-family($font-size-15, $color-silver-chalice, OpenSans600);
+        text-decoration: line-through;
+        margin-right: 8px;
+    }
+
+    &__new-price{
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, OpenSans700);
+    }
+
+    &__main-desk{
+        width: 658px;
+        margin-top: 27px;
+        line-height: 1.4;
+        text-align: left;
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, OpenSans400);
+    }
+
+    &__quantity{
+        @include flex-row-center;
+        margin-top: 35px;
+
+        & label{
+            @include font-size-color-family($font-size-20, $color-dark-slate-grey, Roboto700);
+            margin-right: 22px;
+        }
+
+        & input{
+            width: 134px;
+            height: 80px;
+            border-radius: 16px;
+            border: 1px solid $color-dark-slate-grey;
+            background-color: $color-white;
+            @include font-size-color-family($font-size-20, $color-dark-slate-grey, Roboto700);
+            text-align: center;
+
+        }
+
+        & button{
+            width: auto;
+            margin-left: 20px;
+            padding-left: 39px;
+            padding-right: 39px;
+        }
+    }
+
+    &__description{
+        @include flex-column-center;
+        margin-top: 90px;
+    }
+
+    &__buttons{
+        @include flex-row-center;
+
+        & button{
+            &:first-child{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__desk-text{
+        width: 1137px;
+        margin-top: 27px;
+        line-height: 1.4;
+        text-align: center;
+        @include font-size-color-family($font-size-18, $color-dark-slate-grey, OpenSans400);
+    }
+}

@@ -1,0 +1,144 @@
+.about{
+    width: 100%;
+    background-color: $color-cultured;
+    @include flex-row-center;
+
+    &_position{
+        padding-top: 100px;
+        padding-bottom: 110px;
+    }
+
+    &__text-block{
+        @include flex-column;
+
+        .secondary-text > p{
+            @media screen and (max-width: 1400px) {
+                width: 590px;
+            }
+
+            @media screen and (max-width: 500px) {
+                width: 390px;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .primary-text{
+                text-align: center;
+            }
+            
+            .secondary-text.secondary-text_position {
+                @media screen and (max-width: 700px){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }  
+            }
+
+            .button-blue{
+                align-self: center;
+            }
+        }
+    }
+
+    &__image{
+        background-image: url(images/about/citrus.png);
+        @include background-center-norepeat;
+        background-size: contain;
+        width: 911px;
+        height: 867px;
+
+        @media screen and (max-width: 1400px) {
+            display: none;
+        }
+    }
+
+    .primary-text{
+        &_position{
+            & p{
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .block{
+        &__circle{
+            &_position{
+                top: 50px;
+                left: 15px;
+            }
+        }
+
+        &__image{
+            &_second{
+                background-image: url(images/about/quality-standarts.svg);
+                width: 52px;
+                height: 52px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        justify-content: center;
+    }
+}
+
+.block{
+    @include flex-row;
+
+    &_position{
+        margin-top: 46px;
+        margin-bottom: 30px;
+    }
+
+    &__square{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: $color-white;
+        width: 101px;
+        height: 101px;
+        border-radius: 20px;
+    }
+
+    &__circle{
+        position: absolute;
+        background-color: $color-lemon-chiffon;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        top: 32px;
+        left: 21px;
+        z-index: 1;
+    }
+
+    &__image{
+        background-image: url(images/about/organic-food.svg);
+        @include background-center-norepeat;
+        width: 46px;
+        height: 46px;
+        z-index: 2;
+    }
+
+    &__text{
+        margin-left: 20px;
+        margin-bottom: 46px;
+        width: 444px;
+
+        & span{
+            @include font-size-color-family($font-size-25, $color-dark-slate-grey, Roboto700);
+        }
+
+        & p{
+            margin-top: 12px;
+            line-height: 1.6;
+            @include font-size-color-family($font-size-18, $color-devys-grey, OpenSans400);
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 300px;
+    }
+}

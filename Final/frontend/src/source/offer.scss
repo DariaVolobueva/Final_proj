@@ -1,0 +1,25 @@
+.offer{
+    background-color: $color-dark-slate-grey;
+
+    &_position{
+        padding-top: 13vh;
+        padding-bottom: 13vh;
+        padding-left: 13.5vw;
+        padding-right: 13.5vw;
+    }
+
+    &__blocks{
+        @include flex-row-center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    & .primary-text_position{
+        margin-bottom: 50px;
+    }
+}
+
+.primary-text__header_offer{
+    margin-top: 8px;
+    color: $color-white;
+}

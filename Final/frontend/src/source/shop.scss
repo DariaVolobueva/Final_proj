@@ -1,0 +1,33 @@
+.shop{
+    @include flex-column-center;
+
+    &_position{
+        padding-top: 11vh;
+        padding-left: 13.5vw;
+        padding-right: 13.5vw;
+        padding-bottom: 12.7vh;
+    }
+
+    &__blocks{
+        @include flex-row-center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: 910px) {
+            justify-content: center;
+        }
+    }
+
+    & .food-block{
+        margin-bottom: 20px;
+    }
+
+    & button{
+        margin-top: 150px;
+    }
+}
+
+.primary-text_shop{
+    text-align: center;
+    margin-bottom: 40px;
+}

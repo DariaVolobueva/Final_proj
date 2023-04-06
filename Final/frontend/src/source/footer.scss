@@ -1,0 +1,194 @@
+.footer{
+    @include flex-column-center;
+}
+
+.copyright{
+    font-size: $font-size-18;
+    color: $color-devys-grey;
+    border-top: 1px solid $color-light-grey;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (max-width: 1100px) {
+        font-size: $font-size-15;
+    }
+
+    &_position{
+        padding: 20px 0px;
+    }
+
+    & p{
+        font-family: OpenSans400, $font-families;
+    }
+
+    & span{
+        font-family: OpenSans700, $font-families;
+    }
+}
+
+.footer-main{
+    @include flex-row;
+
+    @media screen and (max-width: 1100px) {
+        justify-content: center;
+    }
+
+    &_position{
+        padding-bottom: 107px;
+    }
+}
+
+.contact-us{
+    text-align: right;
+    border-right: 1px solid $color-light-grey;
+
+    &_position{
+        padding-right: 51px;
+
+        @media screen and (max-width: 1150px) {
+            padding-right: 10px;
+        }
+    }
+
+    & span{
+        display: block;
+        margin-bottom: 32px;
+        font-family: Roboto700, $font-families;
+        font-size: $font-size-30;
+        color: $color-dark-slate-grey;
+        text-transform: capitalize;
+
+        @media screen and (max-width: 700px) {
+            font-size: $font-size-25;
+        }
+    }
+
+    &__info{
+        & p{
+            font-size: $font-size-18;
+            color: $color-devys-grey;
+
+            @media screen and (max-width: 1100px) {
+                font-size: $font-size-15;
+            }
+
+            &:first-child{
+                font-family: OpenSans700, $font-families;
+            }
+
+            &:last-child{
+                font-family: OpenSans400, $font-families;
+                margin-top: 15px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+.footer-center{
+    @include flex-column-center;
+
+    & a{
+        text-decoration: none;
+    }
+
+    &_position{
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @media screen and (max-width: 1300px) {
+            padding: 0;
+        }
+    }
+
+    &__text{
+        margin-top: 23px;
+        margin-bottom: 49px;
+        font-family: OpenSans400;
+        font-size: $font-size-18;
+        color: $color-devys-grey;
+        text-align: center;
+        width: 543px;
+        line-height: 1.5;
+
+        @media screen and (max-width: 1100px) {
+            width: 40%;
+        }
+
+        @media screen and (max-width: 1100px) {
+            font-size: $font-size-15;
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 40%;
+    }
+}
+
+.links{
+    @include flex-row;
+
+    & a{
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-color: $color-anti-flash-white;
+        @include background-center-norepeat;
+    }
+
+    &__instagram{
+        background-image: url(images/footer/instagram.svg);
+    }
+
+    &__facebook{
+        background-image: url(images/footer/facebook.svg);
+    }
+
+    &__twitter{
+        background-image: url(images/footer/twitter.svg);
+    }
+
+    &__pinterest{
+        background-image: url(images/footer/pinterest.svg);
+        margin-right: 0;
+    }
+}
+
+.utility-pages{
+    border-left: 1px solid $color-light-grey;
+    text-transform: capitalize;
+    text-align: left;
+
+    &_position{
+        padding-left: 50px;
+
+        @media screen and (max-width: 1150px) {
+            padding-left: 10px;
+        }
+    }
+
+    & span{
+        display: block;
+        margin-bottom: 32px;
+        color: $color-dark-slate-grey;
+        font-family: Roboto700, $font-families;
+        font-size: $font-size-30;
+
+        @media screen and (max-width: 700px) {
+            font-size: $font-size-25;
+        }
+    }
+
+    & p{
+        color: $color-dark-slate-grey;
+        font-family: OpenSans400, $font-families;
+        font-size: $font-size-18;
+        margin-bottom: 28px;
+
+        @media screen and (max-width: 1100px) {
+            font-size: $font-size-15;
+        }
+    }
+}

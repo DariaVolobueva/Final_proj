@@ -1,0 +1,206 @@
+.testimonial{
+    position: relative;
+    width: 100%;
+    @include flex-column;
+    align-items: center;
+
+    &_position{
+        padding-top: 11vh;
+        padding-bottom: 11vh;
+    }
+
+    &__image{
+        position: absolute;  
+        background-image: url(images/testimonial/background.png);
+        width: 488px;
+        height: 100%;
+        top: 0;
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position-x: -4%;
+        background-position-y: 41%;
+
+        &_left{
+            left: 0;
+            transform: scaleX(-1) scaleY(-1);
+            @media screen and (min-width: 1800px){
+                background-position-x: -1%; 
+            }
+        }
+
+        &_right{
+            right: 0;
+        }
+
+        @media screen and (max-width: 1800px){
+            background-position-x: -8%; 
+        }
+
+        @media screen and (max-width: 1700px){
+            background-position-x: -14%; 
+        }
+
+        @media screen and (max-width: 1600px){
+            background-position-x: -18%; 
+        }
+
+        @media screen and (max-width: 1500px){
+            background-position-x: -21%; 
+        }
+
+        @media screen and (max-width: 1400px){
+            background-position-x: -27%; 
+        }
+
+        @media screen and (max-width: 1200px){
+            background: none;
+        }
+    }
+
+}
+
+.testimonial-content{
+    @include flex-column-center;
+
+    & .primary-text{
+        width: 705px;
+
+        & h1{
+            font-size: $font-size-50;
+        }
+
+        &_position{
+            text-align: center;
+        }
+
+        @media screen and (max-width: 700px) {
+            width: 80%;
+        }
+    }
+
+    &__testimonial{
+        @include flex-column-center;
+    }
+
+    &__avatar{
+        margin-top: 50px;
+        background-image: url(images/testimonial/woman.png);
+        background-size: cover;
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+    }
+
+    &__scores{
+        @include flex-row-center;
+        margin-top: 20px;
+
+        & div{
+            background-image: url(images/testimonial/star.svg);
+            @include background-center-norepeat;
+            width: 28px;
+            height: 27px;
+        }
+    }
+
+    &__info{
+        margin-top: 25px;
+        text-align: center;
+        width: 780px;
+        line-height: 1.6;
+        @include font-size-color-family($font-size-18, $color-devys-grey, OpenSans400);
+        @media screen and (max-width: 800px) {
+            width: 80%;
+        }
+    }
+
+    &__name{
+        margin-top: 20px;
+        @include font-size-color-family($font-size-25, $color-dark-slate-grey, Roboto700);
+    }
+
+    &__consumer{
+        margin-top: 23px;
+        @include font-size-color-family($font-size-15, $color-devys-grey, OpenSans400);
+    }
+
+    &__swiper-circles{
+        @include flex-row-center;
+
+        & div{
+            margin-top: 20px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $color-light-grey;
+    
+            &:nth-child(2){
+                margin-right: 6px;
+                margin-left: 6px;
+                background-color: $color-dark-sea-green;
+
+                @media screen and (max-width: 700px) {
+                    margin-right: 0;
+                    margin-left:  0;
+                }
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            justify-content: center;
+        }
+    }
+}
+
+.info-circles{
+    @include flex-row-center;
+
+    &_position{
+        margin-top: 102px;
+    }
+
+    & div{
+        @include flex-column-center;
+        justify-content: center;
+        width: 211px;
+        height: 211px;
+        margin-right: 62px;
+        background-color: $color-anti-flash-white;
+        border-radius: 50%;
+        border: 5px solid $color-white;
+        outline: 5px solid $color-dark-sea-green;
+
+        & span{
+            @include font-size-color-family($font-size-50, $color-dark-slate-grey, Roboto700);
+        }
+
+        & p{
+            @include font-size-color-family($font-size-18, $color-dark-slate-grey, OpenSans600);
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @media screen and (max-width: 1000px){
+            margin-bottom: 20px;;
+        }
+    }
+
+    @media screen and (max-width: 1000px){
+        flex-wrap: wrap;
+    }
+}
+
+.line{
+    width: 1108px;
+    height: 1px;
+    background-color: $color-chinese-white;
+    &_position{
+        margin-top: 102px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 80%;
+    }
+}

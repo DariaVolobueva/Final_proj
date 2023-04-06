@@ -1,0 +1,111 @@
+.offer-banner{
+    @include flex-row-center;
+    justify-content: center;
+
+    &_position{
+        padding-top: 13.5vh;
+        padding-bottom: 13vh;
+    }
+
+    @media screen and (max-width: 1400px) {
+        flex-direction: column;
+    }
+}
+
+.banner-natural{
+    background-image: url(images/offer-banner/natural.jpg);
+    background-repeat: no-repeat;
+    background-position: 25%;
+    width: 682px;
+    height: 367px;
+    border-radius: 30px;
+    background-size: cover;
+    transform: scaleX(-1);
+    &_position{
+        padding-top: 109px;
+        padding-left: 350px;
+        margin-right: 36px;
+
+        @media screen and (max-width: 1400px) {
+            margin-right: 0;
+            margin-bottom: 36px;
+        }
+
+        @media screen and (max-width: 700px) {
+            padding-left: 154px;
+        }
+    }
+
+    &__offer{
+        background-image: url(images/offer-banner/offer.jpg);
+        background-repeat: no-repeat;
+        transform: scaleX(1);
+
+        & p{
+            transform: scaleX(1);
+        }
+    }
+
+    & p{
+        text-transform: capitalize;
+        color: $color-white;
+        transform: scaleX(-1);
+        display: block;
+        line-height: 1.1;
+
+        &:first-child{
+            width: 277px;
+            font-family: YellowTail400, $font-families;
+            font-size: $font-size-36;
+            margin-bottom: 10px;
+        }
+
+        &:last-child{
+            width: 277px;
+            font-family: Roboto700, $font-families;
+            font-size: $font-size-40;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        background-position: 52%;
+        width: 480px;
+    }
+}
+
+.banner-offer{
+    background-image: url(images/offer-banner/offer.jpg);
+    background-position-y: 54%;
+    width: 682px;
+    height: 367px;
+    border-radius: 30px;
+    background-size: 120%;
+    &_position{
+        padding-top: 109px;
+        padding-left: 55px;
+    }
+
+    & p{
+        display: block;
+        line-height: 1.1;
+
+        &:first-child{
+            width: 277px;
+            color: $color-dark-sea-green;
+            font-family: YellowTail400, $font-families;
+            font-size: $font-size-36;
+            margin-bottom: 10px;
+        }
+
+        &:last-child{
+            width: 277px;
+            color: $color-dark-slate-grey;
+            font-family: Roboto700, $font-families;
+            font-size: $font-size-40;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        width: 480px;
+    }
+}

@@ -1,0 +1,37 @@
+.error{
+    background-image: url(images/error/error-img.png);
+    width: 100%;
+    height: 67vh;
+    background-repeat: no-repeat;
+    margin-bottom: 130px;
+    padding-right: 275px;
+    padding-bottom: 165px;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+    &__text{
+        @include flex-column-center;
+        margin-bottom: 50px;
+
+        & div{
+            @include font-size-color-family(270px, #8FA8A8, Roboto900);
+        }
+        
+        & p{
+            @include font-size-color-family($font-size-70, $color-dark-slate-grey, Roboto700);
+            margin-bottom: 20px;
+        }
+
+        & span{
+            @include font-size-color-family($font-size-18, $color-devys-grey, OpenSans600);
+        }
+
+        & a{
+            margin-top: 50px;
+            align-self: flex-start;
+        }
+    }
+
+}
