@@ -12,7 +12,7 @@ export function Food({foodList, setModal, setFood}){
     
     return (<>
         {foodList.map((val) => {
-            return <div key={val.foodName} className="food-block" data-tag={val.foodName} onClick={event => handleClick(event, val)}> 
+            return <div key={val.foodName} className="food-block" data-tag={val.foodName} onClick={event => handleClick(val)}> 
                         <div className="food-block__category">{val.category}</div> 
                         <img src={val.image} alt="" />
                         <div className="food-block__text">

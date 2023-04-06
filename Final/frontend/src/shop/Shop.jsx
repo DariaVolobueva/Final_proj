@@ -31,6 +31,7 @@ export function Shop(){
             </div>
             <button className="default-button button-blue" onClick={() => setShowMore(!showMore)}>{showMore? "Show less" : "Show more"} <div></div></button>
         </div>
+        {console.log(food)}
         <Modal 
                 modalClose={setModal}
                 food = {food}
