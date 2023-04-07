@@ -5,14 +5,14 @@ import { renderPrice, renderScore} from "../tools/tools";
 
 export function Food({foodList, setModal, setFood}){
 
-    function handleClick(val){
+    function handleClick(event, val){
         setModal(true); 
         setFood(val);
     }
     
     return (<>
         {foodList.map((val) => {
-            return <div key={val.foodName} className="food-block" data-tag={val.foodName} onClick={event => handleClick(val)}> 
+            return <div key={val.foodName} className="food-block" data-tag={val.foodName} onClick={event => handleClick(event, val)}> 
                         <div className="food-block__category">{val.category}</div> 
                         <img src={val.image} alt="" />
                         <div className="food-block__text">
