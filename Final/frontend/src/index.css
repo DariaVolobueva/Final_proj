@@ -150,7 +150,7 @@ table {
 }
 
 .button-light-blue {
-  background-color: #FFFAFA;
+  background-color: #E0E0E0;
   color: #274C5B;
 }
 
@@ -221,6 +221,7 @@ table {
   background-color: #F9F8F8;
   border-radius: 30px;
   position: relative;
+  cursor: pointer;
 }
 .food-block__category {
   position: absolute;
@@ -904,6 +905,24 @@ table {
   padding-bottom: 125px;
   background-color: #FFFAFA;
 }
+@media screen and (max-height: 1000px) {
+  .modal__body {
+    padding-top: 85px;
+    padding-bottom: 95px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .modal__body {
+    padding-top: 75px;
+    padding-bottom: 85px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__body {
+    padding-top: 65px;
+    padding-bottom: 75px;
+  }
+}
 .modal__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -921,10 +940,41 @@ table {
 }
 .modal__image img {
   width: 591px;
-  width: 37vw;
   height: 563px;
-  height: 40vw;
   border-radius: 30px;
+}
+@media screen and (max-height: 1100px) {
+  .modal__image img {
+    width: 491px;
+    height: 463px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-height: 1000px) {
+  .modal__image img {
+    width: 441px;
+    height: 413px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .modal__image img {
+    width: 391px;
+    height: 363px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__image img {
+    width: 341px;
+    height: 313px;
+    margin-left: 80px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .modal__image img {
+    margin-left: 80px;
+  }
 }
 .modal__image div {
   display: -webkit-box;
@@ -948,6 +998,11 @@ table {
   color: #FFFFFF;
   font-family: Roboto500, serif, sans-serif;
 }
+@media screen and (max-width: 1800px) {
+  .modal__image div {
+    left: 111px;
+  }
+}
 .modal__close {
   position: absolute;
   display: -webkit-box;
@@ -968,6 +1023,22 @@ table {
   color: #FFFFFF;
   font-family: Roboto700, serif, sans-serif;
   border-radius: 16px;
+  cursor: pointer;
+}
+@media screen and (max-height: 900px) {
+  .modal__close {
+    top: 102px;
+    right: 166px;
+    width: 54px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 11px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__close {
+    font-size: 15px;
+  }
 }
 .modal__main-text {
   display: -webkit-box;
@@ -979,11 +1050,31 @@ table {
           flex-direction: column;
   margin-left: 88px;
 }
+@media screen and (max-width: 1100px) {
+  .modal__main-text {
+    margin-left: 58px;
+  }
+}
 .modal__name {
   font-size: 40px;
   color: #274C5B;
   font-family: Roboto500, serif, sans-serif;
   margin-bottom: 15px;
+}
+@media screen and (max-height: 1000px) {
+  .modal__name {
+    font-size: 38px;
+  }
+}
+@media screen and (max-height: 900px) {
+  .modal__name {
+    font-size: 36px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__name {
+    font-size: 30px;
+  }
 }
 .modal__score {
   display: -webkit-box;
@@ -1035,6 +1126,16 @@ table {
   color: #274C5B;
   font-family: OpenSans400, serif, sans-serif;
 }
+@media screen and (max-height: 800px) {
+  .modal__main-desk {
+    font-size: 15px;
+  }
+}
+@media screen and (max-height: 1100px) {
+  .modal__main-desk {
+    width: 60%;
+  }
+}
 .modal__quantity {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1065,11 +1166,33 @@ table {
   font-family: Roboto700, serif, sans-serif;
   text-align: center;
 }
+@media screen and (max-height: 900px) {
+  .modal__quantity input {
+    height: 75px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__quantity input {
+    font-size: 15px;
+    height: 60px;
+  }
+}
 .modal__quantity button {
   width: auto;
   margin-left: 20px;
   padding-left: 39px;
   padding-right: 39px;
+}
+@media screen and (max-height: 900px) {
+  .modal__quantity button {
+    height: 75px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__quantity button {
+    font-size: 15px;
+    height: 60px;
+  }
 }
 .modal__description {
   display: -webkit-box;
@@ -1099,6 +1222,18 @@ table {
 .modal__buttons button:first-child {
   margin-right: 20px;
 }
+@media screen and (max-height: 900px) {
+  .modal__buttons button {
+    height: 75px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .modal__buttons button {
+    font-size: 15px;
+    height: 60px;
+    width: 240px;
+  }
+}
 .modal__desk-text {
   width: 1137px;
   margin-top: 27px;
@@ -1107,6 +1242,16 @@ table {
   font-size: 18px;
   color: #274C5B;
   font-family: OpenSans400, serif, sans-serif;
+}
+@media screen and (max-height: 800px) {
+  .modal__desk-text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .modal__desk-text {
+    width: 80%;
+  }
 }
 
 .offer-banner {
