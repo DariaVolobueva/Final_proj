@@ -81,10 +81,10 @@
     &__cart{
         margin-left: 18px;
         margin-left: 1vw;
-        width: 159px;
+        width: auto;
         height: 66px;
         @include flex-row-center;
-        padding: 6px 5px;
+        padding: 6px 6px;
         border-radius: 33px;
         border: 1px solid $color-chinese-white;
 
