@@ -45,7 +45,7 @@ export function Modal(props){
                         </div>
                         <form className="modal__quantity" onSubmit={(e) => handleAddToCart(props.food, e)}>
                             <label>Quantity :</label>
-                            <input type="number" min={1} max={10} onChange={((e) => setInputData(e.target.value))} value={inputData} required/>
+                            <input type="number" min={1} onChange={((e) => setInputData(e.target.value))} value={inputData} required/>
                             <button type="submit" className="default-button button-blue">Add To Cart<div></div></button>
                         </form>
                     </div>
